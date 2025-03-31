@@ -1,17 +1,32 @@
-name: "Publish Storybook to Chromatic"
+# filepath: /Users/davidhohnholt/Downloads/tmechs-monitor/.github/workflows/chromatic.yml
+name: Chromatic
+
 on:
   push:
     branches:
-      - main  # or your main branch
+      - main
   pull_request:
+    branches:
+      - '**'
 
 jobs:
-  chromatic-deployment:
+  chromatic:
+    name: Run Chromatic
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'
-      - run: npm install
-      - run: npx chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Chromatic
+        run: npx chromatic --project-token=chpt_71564a87702b22f
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
