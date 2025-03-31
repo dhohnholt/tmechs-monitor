@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-tmechs-forest text-white px-4 py-2 rounded-md hover:bg-tmechs-forest/90 focus:outline-none focus:ring-2 focus:ring-tmechs-forest focus:ring-offset-2 transition-colors dark:ring-offset-tmechs-dark;
+  }
+
+  .btn-secondary {
+    @apply border border-tmechs-forest text-tmechs-forest px-4 py-2 rounded-md hover:bg-tmechs-forest/10 focus:outline-none focus:ring-2 focus:ring-tmechs-forest focus:ring-offset-2 transition-colors dark:text-tmechs-sage dark:border-tmechs-sage dark:hover:bg-tmechs-sage/10 dark:ring-offset-tmechs-dark;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-colors dark:ring-offset-tmechs-dark;
+  }
+
+  .btn-sage {
+    @apply bg-tmechs-sage text-tmechs-dark px-4 py-2 rounded-md hover:bg-tmechs-sage/90 focus:outline-none focus:ring-2 focus:ring-tmechs-sage focus:ring-offset-2 transition-colors dark:text-white dark:ring-offset-tmechs-dark;
+  }
+
+  .btn-light {
+    @apply bg-tmechs-light text-tmechs-dark px-4 py-2 rounded-md hover:bg-tmechs-light/90 focus:outline-none focus:ring-2 focus:ring-tmechs-light focus:ring-offset-2 transition-colors dark:bg-tmechs-forest dark:text-white dark:hover:bg-tmechs-forest/90 dark:ring-offset-tmechs-dark;
+  }
+
+  .btn-dark {
+    @apply bg-tmechs-dark text-white px-4 py-2 rounded-md hover:bg-tmechs-dark/90 focus:outline-none focus:ring-2 focus:ring-tmechs-dark focus:ring-offset-2 transition-colors dark:bg-tmechs-forest dark:ring-offset-tmechs-dark;
+  }
+}
+
+/* Dark mode styles */
+.dark {
+  background-color: #0D0D0D;
+  color: #EBF2F2;
+}
+
+.dark .bg-white {
+  background-color: rgba(1, 64, 64, 0.9);
+}
+
+.dark .text-gray-900 {
+  color: #EBF2F2;
+}
+
+.dark .text-gray-800 {
+  color: #A3BFBF;
+}
+
+.dark .text-gray-700 {
+  color: rgba(163, 191, 191, 0.9);
+}
+
+.dark .text-gray-600 {
+  color: rgba(163, 191, 191, 0.8);
+}
+
+.dark .text-gray-500 {
+  color: rgba(163, 191, 191, 0.7);
+}
+
+.dark .border-gray-200 {
+  border-color: #014040;
+}
+
+.dark .border-gray-300 {
+  border-color: rgba(1, 64, 64, 0.8);
+}
+
+.dark .shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(13, 13, 13, 0.5);
+}
+
+.dark .bg-gray-50 {
+  background-color: rgba(1, 64, 64, 0.95);
+}
+
+.dark .hover\:bg-gray-50:hover {
+  background-color: rgba(1, 64, 64, 0.8);
+}
+
+.dark .bg-gray-100 {
+  background-color: rgba(1, 64, 64, 0.7);
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: rgba(1, 64, 64, 0.6);
+}
+
+.dark .bg-gray-200 {
+  background-color: rgba(1, 64, 64, 0.5);
+}
+
+.dark .bg-tmechs-sage\/20 {
+  background-color: rgba(1, 64, 64, 0.3);
+}
+
+.dark .hover\:bg-tmechs-sage\/30:hover {
+  background-color: rgba(1, 64, 64, 0.4);
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
+
+/* React DatePicker Custom Styles */
+.dark .react-datepicker {
+  background-color: #014040;
+  border-color: #014040;
+}
+
+.dark .react-datepicker__header {
+  background-color: rgba(1, 64, 64, 0.9);
+  border-color: #014040;
+}
+
+.dark .react-datepicker__current-month {
+  color: #EBF2F2;
+}
+
+.dark .react-datepicker__day-name {
+  color: #A3BFBF;
+}
+
+.dark .react-datepicker__day {
+  color: #EBF2F2;
+}
+
+.dark .react-datepicker__day:hover {
+  background-color: rgba(1, 64, 64, 0.7);
+}
+
+.dark .react-datepicker__day--selected {
+  background-color: #A3BFBF;
+  color: #0D0D0D;
+}
+
+.dark .react-datepicker__day--selected:hover {
+  background-color: rgba(163, 191, 191, 0.9);
+}
+
+.dark .react-datepicker__day--keyboard-selected {
+  background-color: #A3BFBF;
+  color: #0D0D0D;
+}
+
+.dark .react-datepicker__day--keyboard-selected:hover {
+  background-color: rgba(163, 191, 191, 0.9);
+}
+
+.dark .react-datepicker__day--highlighted {
+  background-color: rgba(163, 191, 191, 0.2);
+  color: #EBF2F2;
+}
+
+.dark .react-datepicker__day--highlighted:hover {
+  background-color: rgba(163, 191, 191, 0.3);
+}
+
+.dark .react-datepicker__day--disabled {
+  color: rgba(1, 64, 64, 0.5);
+}
+
+.dark .react-datepicker__day--disabled:hover {
+  background-color: transparent;
+}
+
+.dark .react-datepicker__month-select,
+.dark .react-datepicker__year-select {
+  background-color: #014040;
+  border-color: rgba(1, 64, 64, 0.8);
+  color: #EBF2F2;
+}
+
+.dark .react-datepicker__month-select:focus,
+.dark .react-datepicker__year-select:focus {
+  border-color: #A3BFBF;
+  box-shadow: 0 0 0 1px #A3BFBF;
+}
+
+.dark .react-datepicker__month-container {
+  background-color: #014040;
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+.react-datepicker-popper {
+  z-index: 50;
+}
